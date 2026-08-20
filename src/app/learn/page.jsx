@@ -14,37 +14,22 @@ export default function LearnPage() {
           Learn JavaScript
         </h1>
 
-        <p className="mt-5 text-lg leading-8 text-gray-500">
-          Build a strong JavaScript foundation by learning the language from its
-          core concepts to asynchronous execution.
+        <p className="mt-5 text-lg leading-8 text-gray-600">
+          JavaScript is a versatile, dynamically typed programming language that
+          brings life to web pages by making them interactive. It is used for
+          building interactive web applications and supports both client-side
+          and server-side development.
+          <Link
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 text-sm font-extrabold underline"
+          >
+            Read more...
+          </Link>
         </p>
       </section>
       {/*  */}
-      {/* What is JavaScript */}
-      <section className="mt-12 rounded-xl border p-6 md:p-8">
-        <div className="w-full">
-          <p className="text-sm font-medium text-gray-500">
-            JAVASCRIPT OVERVIEW
-          </p>
-
-          <h2 className="mt-3 text-3xl font-bold">What is JavaScript?</h2>
-
-          <p className="mt-5 text-lg leading-8 text-gray-600">
-            JavaScript is a versatile, dynamically typed programming language
-            that brings life to web pages by making them interactive. It is used
-            for building interactive web applications and supports both
-            client-side and server-side development.
-            <Link
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-2 text-sm font-extrabold underline"
-            >
-              Read more...
-            </Link>
-          </p>
-        </div>
-      </section>
 
       {/* Curriculum */}
       <section className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
