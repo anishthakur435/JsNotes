@@ -60,7 +60,7 @@ export default function ExamplesPage() {
                           href={`/learn/javascript/${section.slug}/${lesson.slug}`}
                           className="text-sm font-medium text-gray-500 hover:text-black"
                         >
-                          Lesson →
+                          Lesson 
                         </Link>
                       </div>
 

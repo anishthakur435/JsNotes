@@ -31,7 +31,7 @@ export default function TopicCard({ section }) {
             </p>
 
             <span className="mt-4 inline-block text-sm font-medium">
-              Open lesson →
+              Open lesson 
             </span>
           </Link>
         ))}
