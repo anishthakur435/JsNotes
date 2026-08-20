@@ -34,57 +34,15 @@ export default function LearnPage() {
             that brings life to web pages by making them interactive. It is used
             for building interactive web applications and supports both
             client-side and server-side development.
-          </p>
-
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            <div className="rounded-lg border p-4">
-              <h3 className="font-semibold">Dynamically Typed</h3>
-
-              <p className="mt-2 text-sm leading-6 text-gray-500">
-                Variable types are determined at runtime, allowing values to
-                change type during program execution.
-              </p>
-            </div>
-
-            <div className="rounded-lg border p-4">
-              <h3 className="font-semibold">Single-Threaded</h3>
-
-              <p className="mt-2 text-sm leading-6 text-gray-500">
-                JavaScript executes code on a single main thread while
-                supporting asynchronous operations through the runtime and event
-                loop.
-              </p>
-            </div>
-
-            <div className="rounded-lg border p-4">
-              <h3 className="font-semibold">Compiled and Interpreted</h3>
-
-              <p className="mt-2 text-sm leading-6 text-gray-500">
-                Modern JavaScript engines use techniques such as just-in-time
-                compilation to optimize code execution and improve performance.
-              </p>
-            </div>
-          </div>
-
-          <div className="py-5 flex flex-wrap gap-3">
             <Link
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-lg bg-black px-5 py-3 text-sm font-medium text-white transition hover:opacity-90"
+              className="px-2 text-sm font-extrabold underline"
             >
-              Read JavaScript on MDN ↗
+              Read more...
             </Link>
-
-            <Link
-              href="https://javascript.info/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-lg border px-5 py-3 text-sm font-medium transition hover:bg-gray-100"
-            >
-              JavaScript.info ↗
-            </Link>
-          </div>
+          </p>
         </div>
       </section>
 
