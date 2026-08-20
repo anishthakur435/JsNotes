@@ -1,69 +1,172 @@
-import Image from "next/image";
+import { curriculum } from "@/lib/curriculum";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div>
+      {/* Hero Section */}
+      <section className="border-b px-4 py-20 text-center md:py-28">
+        <div className="mx-auto max-w-4xl">
+          <p className="mb-4 text-sm font-medium text-gray-500">
+            Interactive JavaScript learning
           </p>
+
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            Learn JavaScript by understanding how it works.
+          </h1>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-500">
+            Explore JavaScript fundamentals, runtime behavior, execution flow,
+            examples, and hands-on practice.
+          </p>
+
+          <div className="mt-8 flex justify-center gap-3">
+            <Link
+              href="/learn"
+              className="inline-block rounded-lg bg-black px-6 py-3 font-medium text-white transition hover:opacity-90"
+            >
+              Start Learning
+            </Link>
+
+            <Link
+              href="/playground"
+              className="inline-block rounded-lg border px-6 py-3 font-medium transition hover:bg-gray-100"
+            >
+              Open Playground
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/*  */}
+      <section className="border-b px-4 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center">
+            <p className="text-sm font-medium text-gray-500">
+              JAVASCRIPT CURRICULUM
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+              Explore JavaScript step by step
+            </h2>
+
+            <p className="mx-auto mt-3 max-w-2xl text-gray-500">
+              Start with the fundamentals and gradually move toward deeper
+              JavaScript concepts.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {curriculum.map((section, index) => (
+              <Link
+                key={section.slug}
+                href={`/learn/javascript/${section.slug}`}
+                className="group rounded-xl border p-6 transition hover:-translate-y-1 hover:bg-gray-50 hover:shadow-md"
+              >
+                <h3 className="mt-3 text-xl font-semibold group-hover:underline">
+                  {section.title}
+                </h3>
+
+                {section.description && (
+                  <p className="mt-3 line-clamp-2 text-sm leading-6 text-gray-500">
+                    {section.description}
+                  </p>
+                )}
+
+                <div className="mt-5 flex items-center justify-between border-t pt-4">
+                  <span className="text-sm text-gray-400">
+                    {section.lessons.length} topics
+                  </span>
+
+                  <span className="text-sm font-medium">Explore →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/learn"
+              className="inline-flex items-center rounded-lg border px-6 py-3 font-medium transition hover:bg-gray-100"
+            >
+              View Full Curriculum →
+            </Link>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/*   */}
+      <section className="border-b px-4 py-16 md:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-medium text-gray-500">
+            INTERACTIVE PLAYGROUND
+          </p>
+
+          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+            Don't just read JavaScript. Run it.
+          </h2>
+
+          <p className="mt-4 text-lg leading-8 text-gray-500">
+            Open the JavaScript playground, experiment with code, inspect
+            console output, and practice concepts as you learn them.
+          </p>
+
+          <div className="mt-8">
+            <Link
+              href="/playground"
+              className="inline-block rounded-lg bg-black px-6 py-3 font-medium text-white transition hover:opacity-90"
+            >
+              Open Playground →
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* JavaScript Executor */}
+      <section className="border-b px-4 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-8 rounded-xl border p-8 md:grid-cols-2 md:items-center md:p-10">
+            <div>
+              <p className="text-sm font-medium text-gray-500">
+                STANDALONE CODE EXECUTOR
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+                Test JavaScript without limits.
+              </h2>
+
+              <p className="mt-4 max-w-2xl leading-7 text-gray-500">
+                Need a space to experiment outside the curriculum? Open my
+                dedicated JavaScript Executor to write, test, and run your own
+                JavaScript code.
+              </p>
+
+              <div className="mt-6">
+                <a
+                  href="https://js-executer-by-anish.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block rounded-lg bg-black px-6 py-3 font-medium text-white transition hover:opacity-90"
+                >
+                  Open JS Executor ↗
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-lg border p-5">
+              <p className="text-sm font-medium text-gray-500">
+                What can you do?
+              </p>
+
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-600">
+                <li>→ Write and execute JavaScript</li>
+                <li>→ Test your own code and ideas</li>
+                <li>→ Inspect console output</li>
+                <li>→ Experiment outside individual lessons</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
