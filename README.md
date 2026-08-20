@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JSNotes
 
-## Getting Started
+> An interactive JavaScript learning platform focused on understanding **how JavaScript actually works**.
 
-First, run the development server:
+JSNotes is a structured JavaScript knowledge base combined with an interactive playground. Instead of only teaching syntax, the project focuses on execution, scope, objects, arrays, asynchronous JavaScript, the Event Loop, and other core concepts that are important for becoming a stronger JavaScript developer.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Users can read structured lessons, explore examples, understand common mistakes, answer interview questions, solve practice tasks, and run JavaScript code directly inside the browser.
+
+---
+
+## ✨ Features
+
+### 📚 Structured JavaScript Curriculum
+
+The learning content is organized into major JavaScript sections and smaller lessons.
+
+Each lesson can include:
+
+- Detailed description
+- Definition
+- Mental model
+- Key concepts
+- Syntax
+- Multiple examples
+- Common mistakes
+- Common mistake explanations
+- Interview questions
+- Interview answers
+- Practice tasks
+- Practice hints
+- Practice solutions
+- Interactive playground code
+- Links to official learning resources
+
+---
+
+### 🧪 Interactive JavaScript Playground
+
+The project includes a custom JavaScript playground powered by Monaco Editor.
+
+Users can:
+
+- Write JavaScript
+- Run code directly in the browser
+- Reset the editor
+- View custom console output
+- Run lesson examples
+- Practice concepts interactively
+- Test synchronous code
+- Test asynchronous code
+- Experiment with JavaScript behavior
+
+Supported console methods include:
+
+```js
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📚 Documentation & Learning Resources
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This project includes links to trusted JavaScript documentation and learning resources to help users explore each topic in more depth.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### MDN Web Docs
 
-## Learn More
+MDN is used as a reference for official JavaScript documentation, language features, APIs, syntax, and detailed technical explanations.
 
-To learn more about Next.js, take a look at the following resources:
+- [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+- [MDN JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### JavaScript.info
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+JavaScript.info provides detailed explanations and practical examples for understanding JavaScript concepts step by step.
 
-## Deploy on Vercel
+- [JavaScript.info](https://javascript.info/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Each lesson can include direct links to relevant MDN and JavaScript.info resources, allowing learners to explore the official documentation alongside the interactive lessons and examples.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Live Demo
+
+### JSNotes
+
+Explore JavaScript concepts, lessons, examples, and the interactive playground.
+
+[Open JSNotes]("")
+
+### JavaScript Executor
+
+Experiment with your own JavaScript code in a standalone executor.
+
+[Open JS Executor](https://js-executer-by-anish.vercel.app/)
