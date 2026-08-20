@@ -5,11 +5,7 @@ export default function LearnPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-16">
       {/* Page Header */}
-      <section className="max-w-3xl">
-        <p className="text-sm font-medium text-gray-500">
-          JavaScript Curriculum
-        </p>
-
+      <section className="">
         <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
           Learn JavaScript
         </h1>
