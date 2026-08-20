@@ -2,17 +2,6 @@ import Link from "next/link";
 import { curriculum } from "@/lib/curriculum";
 
 export default function ExamplesPage() {
-  const allExamples = curriculum.flatMap((section) =>
-    section.lessons.flatMap((lesson) =>
-      (lesson.examples || []).map((example, index) => ({
-        ...example,
-        section,
-        lesson,
-        index,
-      })),
-    ),
-  );
-
   return (
     <main className="mx-auto max-w-6xl px-4 py-16">
       <section className="max-w-3xl">

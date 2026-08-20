@@ -81,7 +81,7 @@ Each lesson can include direct links to relevant MDN and JavaScript.info resourc
 
 Explore JavaScript concepts, lessons, examples, and the interactive playground.
 
-[Open JSNotes]("")
+<!-- [Open JSNotes]("") -->
 
 ### JavaScript Executor
 
